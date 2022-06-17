@@ -1,176 +1,151 @@
-html   {
-    height: 100%;
-    margin: 0;
-}
+html   
+    {
+        height: 100%;
+        margin: 0;
+    }
 
-body   {
-    margin: 0;
-    background: linear-gradient(180deg, rgb(182, 159, 97), rgb(128, 89, 24)) fixed;
-    height: 50%;
-    overflow-anchor: none;
-}
+body   
+    {
+        margin: 0;
+        background: linear-gradient(180deg, rgb(182, 159, 97), rgb(128, 89, 24)) fixed;
+        height: 50%;
+        overflow-anchor: none;
+    }
+.image 
+    {
+        position: absolute;
+        object-fit: cover;
+        z-index: 2;
+        top: 17em;
+        width: 11em;
+        height: 11em;
+        border-radius: 50%;
+        border: 0.6em double white;
+        background: linear-gradient(to bottom, white, black);
+        background-size: cover;
+        background-origin: border-box;
+        box-shadow: 0 0 0px black;
+        animation: expand 1s forwards, Down 0.75s 0.5s forwards, Up 1s 0.9s forwards;
+        transform: scale(0.01);
+        transition: 0.3s;
+    }
 
-.imageLink {
-    display: flex;
-    justify-content: center;
-}
+.image:hover 
+    {
+        height: 11.5em;
+        width: 11.5em;
+    }
+.odin
+    {
+        font-size:medium;
+        margin-right: 200px;
+    }
 
-.image {
-    position: absolute;
-    object-fit: cover;
-    z-index: 2;
-    top: 17em;
-    width: 11em;
-    height: 11em;
-    border-radius: 50%;
-    border: 0.6em double white;
-    background: linear-gradient(to bottom, white, black);
-    background-size: cover;
-    background-origin: border-box;
-    box-shadow: 0 0 0px black;
-    animation: expand 1s forwards, Down 0.75s 0.5s forwards, Up 1s 0.9s forwards;
-    transform: scale(0.01);
-    transition: 0.3s;
-}
+.container  
+    {
+        position: relative;
+        top: 8em;
+        width: 45em;
+        height: 30em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.5em double white;
+        margin: 0 auto;
+        box-sizing: border-box;
+        border-radius: 1em;
+        background:rgb(59, 59, 59);
 
-.image:hover {
-    height: 11.5em;
-    width: 11.5em;
-}
+    }
 
-.container  {
-    position: relative;
-    top: 8em;
-    width: 45em;
-    height: 30em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0.5em double white;
-    margin: 0 auto;
-    box-sizing: border-box;
-    border-radius: 1em;
-    background:rgb(59, 59, 59);
+.content
+    {
+        position: absolute;
+        width: 99%;
+        height: 99%;
+        box-sizing: border-box;
+        background: rgb(29, 29, 29);
+        border: double 0.2em transparent;
+        border-radius: 0.5em;
+        background-image: linear-gradient(rgb(26, 26, 26), rgb(26, 26, 26)), linear-gradient(to bottom, orange, gold);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+    }
+.foods
+    {
 
-}
+        position: absolute;
+        width: 60%;
+        height: 99%;
+        margin-left: 230px;
+        background: rgb(194, 148, 148);
+        border: double 0.2em transparent;
+        border-radius: 1em;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
 
-.content {
-    position: absolute;
-    width: 99%;
-    height: 99%;
-    box-sizing: border-box;
-    background: rgb(29, 29, 29);
-    border: double 0.2em transparent;
-    border-radius: 0.5em;
-    background-image: linear-gradient(rgb(26, 26, 26), rgb(26, 26, 26)), linear-gradient(to bottom, orange, gold);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-}
+    }
 
-.underline  {
-    position: absolute;
-    border-top: 1.4em solid white;
-    border-bottom: 1.4em solid white;
-    border-left: 1.4em solid transparent;
-    border-right: 1.4em solid transparent;
-    margin-top: 0em;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    animation: appear 0.9s 1.4s forwards, extend 1s 2.2s forwards;
-}
+.underline 
+    {
+        position: absolute;
+        border-top: 1.4em solid white;
+        border-bottom: 1.4em solid white;
+        border-left: 1.4em solid transparent;
+        border-right: 1.4em solid transparent;
+        margin-top: 0em;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        animation: appear 0.9s 1.4s forwards, extend 1s 2.2s forwards;
+   }
 
-.recipe {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 1.5em;
-    font-size: 2.5em;
-    color: brown;
-    font-family: "Yuji Mai";
-    font-weight: normal;
-    opacity: 0;
-    animation: recipeAppear 1s 3s forwards;
-}
+.recipe 
+    {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 1.5em;
+        font-size: 2.5em;
+        color: brown;
+        font-family: "Yuji Mai";
+        font-weight: normal;
+        opacity: 0;
+        animation: recipeAppear 1s 3s forwards;
+    }
 
-.description {
-    
-    position: relative;
-    color: white;
-    width: 90%;
-    margin: 10em auto 0 auto;
-    font-family: "Amethysta";
-    opacity: 0;
-    animation: fadeIn 2s 3.5s forwards;
-}
-
-.info {
-    width: 70%;
-    height: 2.5em;
-    margin: 1em auto 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    border: 0.25em double white;
-    border-radius: 2em;
-}
-
-.thymeContainer {
-    display: flex;
-    align-items: center;
-    width: 20%;
-    margin-left: -1em;
-    height: 70%;
-    justify-content: space-between;
-}
-
-.clockContainer {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    width: 4.5%;
-}
-
-.thyme {
-    position: absolute;
-    left: 28%;
-}
-
-.serparator {
-    position: absolute;
-    box-sizing: border-box;
-    border: 0.1em solid white;
-    height: 10%;
-}
+.description
+    {
+        
+        position: relative;
+        color: white;
+        width: 90%;
+        margin: 10em auto 0 auto;
+        font-family: "Amethysta";
+        opacity: 0;
+        animation: fadeIn 2s 3.5s forwards;
+    }
 
 .list
- {
-font-size: 15px;
-}
- 
+    {
+        font-size: 15px;
+    }
+            
 
 .list
-{
+    {
+        
     text-decoration:none;
-   color:whitesmoke;
-   font-size: 30px;
-   
+    color:whitesmoke;
+    font-size: 30px;
+    
 
-}
+    }
 .list:hover
-{color:rgb(175, 22, 22);
-font-size: 30px;
-}
-
-
-
-
-
-
-
-
-
-
+    {
+        color:rgb(228, 159, 31);
+        font-size: 35px;
+    }
 
 @keyframes expand {
     from {transform: scale(0.01)} to {transform: scale(1)};
